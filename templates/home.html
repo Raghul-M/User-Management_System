@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="{{url_for('static',filename ='style.css')}}">
+</head>
+<body>
+  <h1>User Management Using Python Flask &  MySQL</h1>
+  <h4>
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+             {% for message in messages %}
+                {{message}}
+             {% endfor %}
+          {% endif %}
+      {% endwith %}
+  </h4>
+  <p><a href="{{url_for('add_users')}}">Add Users</a></p>
+ <table>
+     <tr>
+         <th>ID</th>
+         <th>NAME</th>
+         <th>AGE</th>
+         <th>CITY</th>
+         <th>EDIT</th>
+         <th>DELETE</th>
+     </tr>
+     {% for data in datas %}
+     <tr>
+         <td>{{data.ID}}</td>
+         <td>{{data.Name}}</td>
+         <td>{{data.age}}</td>
+         <td>{{data.city}}</td>
+         <td><a href="{{url_for('edit_users',id=data.ID)}}">EDIT</a></td>
+         <td><a onclick="return confirm('Are u sure to delete?');" href="{{url_for('delete_users',id=data.ID)}}">DELETE</a></td>
+     </tr>
+     {% endfor %}
+ </table>
+
+</body>
+</html>
