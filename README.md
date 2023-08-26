@@ -3,6 +3,7 @@
 
 This repository contains a User Management System CRUD (Create, Read, Update, Delete) application using Flask, Python, and MySQL. The application allows users to perform basic CRUD operations on user data, such as adding new users, viewing user details, updating user information, and deleting user records.
 
+## Sample Img
 ![sample photo](https://freedial.in/wp-content/uploads/2021/02/1_mzMIXN2JodV2taEBzmUKLg-1024x486.png)
 
 ## Prerequisites
