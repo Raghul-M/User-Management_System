@@ -17,7 +17,7 @@ Before running the application, make sure you have the following installed:
 
 1. Clone this repository to your local machine using the following command:
 ```bash
->>git clone https://github.com/your-username/user-management-system.git
+>>git clone https://github.com/raghul-m/user-management-system.git
 ```
 2. Navigate to the project directory:
 ```bash
